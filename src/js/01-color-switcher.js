@@ -8,6 +8,8 @@ startBtn.addEventListener('click', () => {
         const bgrColor = getRandomHexColor();
         document.body.style.backgroundColor = bgrColor;
     }, 1000);
+
+    return changeBgrColor;
 });
 
 stopBtn.addEventListener('click', () => {
