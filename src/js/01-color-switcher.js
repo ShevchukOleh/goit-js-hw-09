@@ -1,15 +1,15 @@
 const startBtn = document.querySelector('[data-start]'); 
 const stopBtn = document.querySelector('[data-stop]');
 
+stopBtn.disabled = true;
+
 startBtn.addEventListener('click', () => {
     startBtn.disabled = true;
     stopBtn.disabled = false;
-    const changeBgrColor = setInterval(() => {
+    return changeBgrColor = setInterval(() => {
         const bgrColor = getRandomHexColor();
         document.body.style.backgroundColor = bgrColor;
     }, 1000);
-
-    return changeBgrColor;
 });
 
 stopBtn.addEventListener('click', () => {
