@@ -6,16 +6,20 @@ stopBtn.disabled = true;
 startBtn.addEventListener('click', () => {
     startBtn.disabled = true;
     stopBtn.disabled = false;
-    return changeBgrColor = setInterval(() => {
+    changeBgrColor();
+});
+
+function changeBgrColor() {
+    return bgr = setInterval(() => {
         const bgrColor = getRandomHexColor();
         document.body.style.backgroundColor = bgrColor;
     }, 1000);
-});
+}
 
 stopBtn.addEventListener('click', () => {
     startBtn.disabled = false;
     stopBtn.disabled = true;
-    clearInterval(changeBgrColor);
+    clearInterval(bgr);
 })
 
 function getRandomHexColor() {
