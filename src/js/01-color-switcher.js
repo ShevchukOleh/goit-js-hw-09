@@ -4,7 +4,7 @@ const stopBtn = document.querySelector('[data-stop]');
 startBtn.addEventListener('click', () => {
     startBtn.disabled = true;
     stopBtn.disabled = false;
-    changeBgrColor = setInterval(() => {
+    const changeBgrColor = setInterval(() => {
         const bgrColor = getRandomHexColor();
         document.body.style.backgroundColor = bgrColor;
     }, 1000);
