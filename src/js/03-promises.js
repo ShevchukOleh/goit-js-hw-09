@@ -21,7 +21,7 @@ form.addEventListener('submit', event => {
       Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`, {timeout: 5000,});
     })
     .catch(({ position, delay }) => {
-      Notiflix.Notify.warning(`❌ Rejected promise ${position} in ${delay}ms`, {timeout: 5000,});
+      Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`, {timeout: 5000,});
     });
   }
 });
