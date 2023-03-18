@@ -5,6 +5,8 @@ function startBackgroundChange() {
     document.body.style.backgroundColor = getRandomHexColor();
 }
 
+stopBtn.disabled = true;
+
 let intervalId;
 
 startBtn.addEventListener('click', () => {
